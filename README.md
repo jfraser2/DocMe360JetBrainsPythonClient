@@ -12,19 +12,29 @@ Follow all directions in the README.md<br/>
 
 # Required Client Side Installs(Do this second)
 open your fav Windows Shell Instance(Command Prompt Instance) as Administrator<br/>
-installs with pip3 will go to folder C:\Program Files\Python\Python313\Lib\site-packages<br/>
+Install Python, my version is 3.13.5, the install went to C:\Program Files\Python\Python313<br/>
+Your folders may vary. lol<br/>
+Additional installs with pip3 will go to folder C:\Program Files\Python\Python313\Lib\site-packages<br/>
 pip3 install pydantic -U<br/>
 pip3 install python-dateutil<br/>
 pip3 install urllib3<br/>
 
-#Load the Eclipse Project on your Machine
-The Project is loaded into Eclipse(File Import from Git)<br/>
-using url: https://github.com/jfraser2/DocMe360PythonClient.git<br/>
-PyDev needs to be installed from the eclipse marketplace, into Eclipse.<br/>
-I made this a totally separate Eclipse install from my Java Eclipse.<br/>
+#Load the Project on your Machine
+Load the Project into JetBrains, any flavor, I used PyCharm<br/>
+using url: https://github.com/jfraser2/DocMe360JetBrainsPythonClient.git<br/>
+I think it will work in WebStorm, and even IntelliJ. The first load step is<br/>
+under File, then choose Project from Version Control. Use the provided Url.<br/>
+Next you will have to mark a lot of Folders. To start Right Click on the src folder<br/>
+At the very bottom of the list you will see, Mark Directory as, then under that,<br/>
+click Sources Root, the folder name should turn blue. The next top level folders to mark<br/>
+are: forms, menus, openapi_client,  and panels. They are marked with Resource Root.<br/>
+The marked folders will receive a very tiny orange-yellow three line icon. <br/>
+The folder openapi_client has two children to mark, the same way: api and model<br/>
+Now you have a project you can run. yea!! The true purpose is loading,<br/>
+the behind the scenes file PYTHONPATH<br/>
 
 
-#OpenApi Generator CLI<br/>
+#OpenApi Generator CLI(very Optional)<br/>
 The source code in folder src/openapi_client was generated.<br/>
 As always, I used the generate and fix methodology. lol <br/>
 The files I had to repair were:<br/>
@@ -46,20 +56,19 @@ npm root -g<br/>
 
 Run two commands in your fav administrator shell<br/>
 cd to the project install folder.<br/>
-openapi-generator-cli generate -i ./OpenApiConfig.json -g python -o ./src --additional-properties=generateSourceCodeOnly=true
+openapi-generator-cli generate -i ./OpenApiConfig.json -g python -o ./src --additional-properties=generateSourceCodeOnly=true<br/>
  
 
-#Run the client Side in Eclipse(Do this third)
-Right click on Project DocMe360PythonClient<br/>
-Hover on Run As, If you have not made one yet, choose Run Configurations..., and, follow the directions from article below<br/>
+#Run the client Side in JetBrains(Do this third)
+In the src folder of the project, open app.py(double click on the name)<br/>
+Then click the Run Icon, a Green Triangle, on the top Menu<br/>
+After the GUI appears expand it to full size, and test away.<br/>
+Even If you forget to start the Server, it will not bomb<br/>
  
-https://www.google.com/search?q=eclipse+run+configuration+for+python&rlz=1C1JSBI_enUS1092US1092&oq=eclipse+run+configuration+for+python&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigATIHCAUQIRigATIHCAYQIRifBTIHCAcQIRifBTIHCAgQIRifBTIHCAkQIRifBdIBCjE3MzcyajBqMTWoAgiwAgHxBdFtcR_Y58U4&sourceid=chrome&ie=UTF-8<br/>
-
-If you have made one choose it.<br/>
 You can also run it from the command line<br/>
 
 #Example Command Line
 open your fav Windows Shell Instance(Command Prompt Instance)<br/>
 Then cd to the project Install folder<br/>
-cd C:\work\AI\DocMe360PythonClient<br/>
+cd C:\work\AI\DocMe360JetBrainsPythonClient<br/>
 "C:\Program Files\Python\Python313\python" ./src/app.py
