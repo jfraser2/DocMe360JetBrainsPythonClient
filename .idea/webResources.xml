@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebResourcesPaths">
+    <contentEntries>
+      <entry url="file://$PROJECT_DIR$">
+        <entryData>
+          <resourceRoots>
+            <path value="file://$PROJECT_DIR$/src/forms" />
+            <path value="file://$PROJECT_DIR$/src/menus" />
+            <path value="file://$PROJECT_DIR$/src/openapi_client" />
+            <path value="file://$PROJECT_DIR$/src/panels" />
+            <path value="file://$PROJECT_DIR$/src/openapi_client/api" />
+            <path value="file://$PROJECT_DIR$/src/openapi_client/models" />
+          </resourceRoots>
+        </entryData>
+      </entry>
+    </contentEntries>
+  </component>
+</project>
